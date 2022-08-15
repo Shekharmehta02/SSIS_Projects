@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{93877F7F-9431-4EC6-891E-D7098E58E3CE}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{5948BDDC-FAAE-4869-985C-9BE3768559D4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -200,11 +200,10 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="510"
+                      length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WO]"
                       name="Copy of WO"
                       truncationRowDisposition="FailComponent">
@@ -222,11 +221,10 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of District]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="510"
+                      length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of District]"
                       name="Copy of District"
                       truncationRowDisposition="FailComponent">
@@ -244,11 +242,10 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LeadTech]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="510"
+                      length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LeadTech]"
                       name="Copy of LeadTech"
                       truncationRowDisposition="FailComponent">
@@ -266,11 +263,10 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Service]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="510"
+                      length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Service]"
                       name="Copy of Service"
                       truncationRowDisposition="FailComponent">
@@ -288,11 +284,10 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Rush]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="510"
+                      length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Rush]"
                       name="Copy of Rush"
                       truncationRowDisposition="FailComponent">
@@ -310,7 +305,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ReqDate]"
-                      dataType="date"
+                      dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ReqDate]"
@@ -330,7 +325,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WorkDate]"
-                      dataType="date"
+                      dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WorkDate]"
@@ -350,7 +345,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Techs]"
-                      dataType="r4"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Techs]"
@@ -410,7 +405,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrHrs]"
-                      dataType="r4"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrHrs]"
@@ -430,7 +425,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PartsCost]"
-                      dataType="r4"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PartsCost]"
@@ -450,11 +445,10 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Payment]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="510"
+                      length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Payment]"
                       name="Copy of Payment"
                       truncationRowDisposition="FailComponent">
@@ -472,7 +466,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Wait]"
-                      dataType="r4"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Wait]"
@@ -492,7 +486,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrRate]"
-                      dataType="r4"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrRate]"
@@ -512,7 +506,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrCost]"
-                      dataType="r4"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrCost]"
@@ -532,7 +526,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrFee]"
-                      dataType="r4"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrFee]"
@@ -552,7 +546,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PartsFee]"
-                      dataType="r4"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PartsFee]"
@@ -572,7 +566,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalCost]"
-                      dataType="r4"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalCost]"
@@ -592,7 +586,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalFee]"
-                      dataType="r4"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalFee]"
@@ -612,11 +606,10 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ReqDay]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="510"
+                      length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ReqDay]"
                       name="Copy of ReqDay"
                       truncationRowDisposition="FailComponent">
@@ -634,11 +627,10 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WorkDay]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="510"
+                      length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WorkDay]"
                       name="Copy of WorkDay"
                       truncationRowDisposition="FailComponent">
@@ -697,7 +689,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[LND_ORDER_2]</property>
+                  name="OpenRowset">[LND_ORDER_2]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -754,145 +746,145 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[WO]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of WO]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="WO"
+                      cachedName="Copy of WO"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[WO]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[WO]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WO]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[District]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of District]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="District"
+                      cachedName="Copy of District"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[District]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[District]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of District]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[LeadTech]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of LeadTech]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="LeadTech"
+                      cachedName="Copy of LeadTech"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[LeadTech]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[LeadTech]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LeadTech]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Service]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of Service]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Service"
+                      cachedName="Copy of Service"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[Service]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[Service]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Service]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Rush]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of Rush]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Rush"
+                      cachedName="Copy of Rush"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[Rush]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[Rush]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Rush]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[ReqDate]"
-                      cachedDataType="date"
-                      cachedName="ReqDate"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of ReqDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Copy of ReqDate"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[ReqDate]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[ReqDate]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ReqDate]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[WorkDate]"
-                      cachedDataType="date"
-                      cachedName="WorkDate"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of WorkDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Copy of WorkDate"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[WorkDate]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[WorkDate]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WorkDate]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Techs]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of Techs]"
                       cachedDataType="r8"
-                      cachedName="Techs"
+                      cachedName="Copy of Techs"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[Techs]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[Techs]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Techs]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[WtyLbr]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of WtyLbr]"
                       cachedDataType="cy"
-                      cachedName="WtyLbr"
+                      cachedName="Copy of WtyLbr"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[WtyLbr]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[WtyLbr]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WtyLbr]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[WtyParts]"
-                      cachedDataType="cy"
-                      cachedName="WtyParts"
-                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[WtyParts]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[WtyParts]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[LbrHrs]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of LbrHrs]"
                       cachedDataType="r8"
-                      cachedName="LbrHrs"
+                      cachedName="Copy of LbrHrs"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[LbrHrs]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[LbrHrs]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrHrs]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[PartsCost]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of WtyParts]"
+                      cachedDataType="cy"
+                      cachedName="Copy of WtyParts"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[WtyParts]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WtyParts]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of PartsCost]"
                       cachedDataType="r8"
-                      cachedName="PartsCost"
+                      cachedName="Copy of PartsCost"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[PartsCost]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[PartsCost]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PartsCost]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Payment]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of Payment]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Payment"
+                      cachedName="Copy of Payment"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[Payment]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[Payment]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Payment]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Wait]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of Wait]"
                       cachedDataType="r8"
-                      cachedName="Wait"
+                      cachedName="Copy of Wait"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[Wait]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[Wait]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Wait]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[LbrRate]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of LbrRate]"
                       cachedDataType="r8"
-                      cachedName="LbrRate"
+                      cachedName="Copy of LbrRate"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[LbrRate]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[LbrRate]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrRate]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[LbrCost]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of LbrCost]"
                       cachedDataType="r8"
-                      cachedName="LbrCost"
+                      cachedName="Copy of LbrCost"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[LbrCost]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[LbrCost]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrCost]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[LbrFee]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of LbrFee]"
                       cachedDataType="r8"
-                      cachedName="LbrFee"
+                      cachedName="Copy of LbrFee"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[LbrFee]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[LbrFee]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrFee]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[PartsFee]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of PartsFee]"
                       cachedDataType="r8"
-                      cachedName="PartsFee"
+                      cachedName="Copy of PartsFee"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[PartsFee]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[PartsFee]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PartsFee]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[TotalCost]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of TotalCost]"
                       cachedDataType="r8"
-                      cachedName="TotalCost"
+                      cachedName="Copy of TotalCost"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[TotalCost]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[TotalCost]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalCost]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[TotalFee]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of TotalFee]"
                       cachedDataType="r8"
-                      cachedName="TotalFee"
+                      cachedName="Copy of TotalFee"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[TotalFee]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[TotalFee]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalFee]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[ReqDay]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of ReqDay]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="ReqDay"
+                      cachedName="Copy of ReqDay"
                       externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[ReqDay]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[ReqDay]" />
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ReqDay]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[WorkDay]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].Columns[Copy of WorkDay]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="WorkDay"
-                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[WorkDay]"
-                      lineageId="Package\Data Flow Task\Order_2.Outputs[Excel Source Output].Columns[WorkDay]" />
+                      cachedName="Copy of WorkDay"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[ WorkDay]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WorkDay]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -988,10 +980,10 @@
                       length="255"
                       name="ReqDay" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[WorkDay]"
+                      refId="Package\Data Flow Task\LND_ORDER_2.Inputs[OLE DB Destination Input].ExternalColumns[ WorkDay]"
                       dataType="wstr"
                       length="255"
-                      name="WorkDay" />
+                      name=" WorkDay" />
                   </externalMetadataColumns>
                 </input>
               </inputs>

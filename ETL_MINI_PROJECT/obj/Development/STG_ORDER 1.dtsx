@@ -11,10 +11,48 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{8D1088FA-A735-405D-90D7-A4C3DBDE1116}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{57785D6B-8AB7-49AD-8397-7434E12489D5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SHEKHAR]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3369586D-5B1E-44F4-A413-057601CAD51D}"
+      DTS:ObjectName="SHEKHAR">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=SHEKHAR;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SHEKHAR.A_LANDING]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{33905FA4-7E8F-47FA-91EC-193DECBEF6B8}"
+      DTS:ObjectName="SHEKHAR.A_LANDING">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=SHEKHAR;Initial Catalog=A_LANDING;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SHEKHAR.A_STAGING]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{18A8F28E-401D-439A-9A05-D82EF3EAC66D}"
+      DTS:ObjectName="SHEKHAR.A_STAGING">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=SHEKHAR;Initial Catalog=A_STAGING;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -32,6 +70,969 @@
           version="1">
           <components>
             <component
+              refId="Package\Data Flow Task\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ReqDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ReqDate"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[ReqDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[WorkDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="WorkDate"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[WorkDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[LbrHrs]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LbrHrs"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LbrHrs]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PartsCost]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PartsCost"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[PartsCost]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Wait]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Wait"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[Wait]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[LbrCost]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LbrCost"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LbrCost]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[LbrFee]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LbrFee"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LbrFee]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[PartsFee]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PartsFee"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[PartsFee]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[TotalCost]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TotalCost"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[TotalCost]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[TotalFee]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TotalFee"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[TotalFee]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[LbrRate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LbrRate"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LbrRate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ReqDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ReqDate]"
+                      name="Copy of ReqDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[ReqDate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WorkDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WorkDate]"
+                      name="Copy of WorkDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[WorkDate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrHrs]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrHrs]"
+                      name="Copy of LbrHrs"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LbrHrs]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PartsCost]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PartsCost]"
+                      name="Copy of PartsCost"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[PartsCost]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Wait]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Wait]"
+                      name="Copy of Wait"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[Wait]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrCost]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrCost]"
+                      name="Copy of LbrCost"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LbrCost]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrFee]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrFee]"
+                      name="Copy of LbrFee"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LbrFee]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PartsFee]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PartsFee]"
+                      name="Copy of PartsFee"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[PartsFee]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalCost]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalCost]"
+                      name="Copy of TotalCost"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[TotalCost]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalFee]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalFee]"
+                      name="Copy of TotalFee"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[TotalFee]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrRate]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrRate]"
+                      name="Copy of LbrRate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LbrRate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\LND_ORDER_1"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="LND_ORDER_1"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[LND_ORDER_1]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\LND_ORDER_1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SHEKHAR.A_LANDING]"
+                  connectionManagerRefId="Package.ConnectionManagers[SHEKHAR.A_LANDING]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[WO]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[WO]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[WO]"
+                      name="WO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[District]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[District]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[District]"
+                      name="District"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LeadTech]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[LeadTech]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LeadTech]"
+                      name="LeadTech"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[Service]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[Service]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[Service]"
+                      name="Service"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[Rush]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[Rush]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[Rush]"
+                      name="Rush"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[ReqDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[ReqDate]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[ReqDate]"
+                      name="ReqDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[WorkDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[WorkDate]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[WorkDate]"
+                      name="WorkDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[Techs]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[Techs]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[Techs]"
+                      name="Techs"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[WtyLbr]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[WtyLbr]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[WtyLbr]"
+                      name="WtyLbr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[WtyParts]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[WtyParts]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[WtyParts]"
+                      name="WtyParts"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LbrHrs]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[LbrHrs]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LbrHrs]"
+                      name="LbrHrs"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[PartsCost]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[PartsCost]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[PartsCost]"
+                      name="PartsCost"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[Payment]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[Payment]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[Payment]"
+                      name="Payment"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[Wait]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[Wait]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[Wait]"
+                      name="Wait"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LbrRate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[LbrRate]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LbrRate]"
+                      name="LbrRate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LbrCost]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[LbrCost]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LbrCost]"
+                      name="LbrCost"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LbrFee]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[LbrFee]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LbrFee]"
+                      name="LbrFee"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[PartsFee]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[PartsFee]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[PartsFee]"
+                      name="PartsFee"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[TotalCost]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[TotalCost]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[TotalCost]"
+                      name="TotalCost"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[TotalFee]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[TotalFee]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[TotalFee]"
+                      name="TotalFee"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[ReqDay]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[ReqDay]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[ReqDay]"
+                      name="ReqDay"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[WorkDay]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[WorkDay]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[WorkDay]"
+                      name="WorkDay"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[WO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="WO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[District]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="District" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[LeadTech]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LeadTech" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[Service]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Service" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[Rush]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Rush" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[ReqDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ReqDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[WorkDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="WorkDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[Techs]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Techs" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[WtyLbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="WtyLbr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[WtyParts]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="WtyParts" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[LbrHrs]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LbrHrs" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[PartsCost]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PartsCost" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[Payment]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Payment" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[Wait]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Wait" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[LbrRate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LbrRate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[LbrCost]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LbrCost" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[LbrFee]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LbrFee" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[PartsFee]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PartsFee" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[TotalCost]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TotalCost" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[TotalFee]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TotalFee" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[ReqDay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ReqDay" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].ExternalColumns[WorkDay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="WorkDay" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[WO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[WO]"
+                      name="WO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[District]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[District]"
+                      name="District" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[LeadTech]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[LeadTech]"
+                      name="LeadTech" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[Service]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[Service]"
+                      name="Service" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[Rush]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[Rush]"
+                      name="Rush" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[ReqDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[ReqDate]"
+                      name="ReqDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[WorkDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[WorkDate]"
+                      name="WorkDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[Techs]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[Techs]"
+                      name="Techs" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[WtyLbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[WtyLbr]"
+                      name="WtyLbr" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[WtyParts]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[WtyParts]"
+                      name="WtyParts" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[LbrHrs]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[LbrHrs]"
+                      name="LbrHrs" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[PartsCost]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[PartsCost]"
+                      name="PartsCost" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[Payment]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[Payment]"
+                      name="Payment" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[Wait]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[Wait]"
+                      name="Wait" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[LbrRate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[LbrRate]"
+                      name="LbrRate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[LbrCost]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[LbrCost]"
+                      name="LbrCost" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[LbrFee]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[LbrFee]"
+                      name="LbrFee" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[PartsFee]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[PartsFee]"
+                      name="PartsFee" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[TotalCost]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[TotalCost]"
+                      name="TotalCost" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[TotalFee]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[TotalFee]"
+                      name="TotalFee" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[ReqDay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[ReqDay]"
+                      name="ReqDay" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[WorkDay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[WorkDay]"
+                      name="WorkDay" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Data Flow Task\STG_ORDER_1"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -47,7 +1048,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
+                  name="OpenRowset">[STG_ORDER_1]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -69,7 +1070,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -81,7 +1082,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -90,6 +1091,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\STG_ORDER_1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SHEKHAR.A_STAGING]"
+                  connectionManagerRefId="Package.ConnectionManagers[SHEKHAR.A_STAGING]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -100,8 +1103,275 @@
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[WO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="WO"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[WO]"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[WO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[District]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="District"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[District]"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[District]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[LeadTech]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LeadTech"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[LeadTech]"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[LeadTech]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[Service]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Service"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[Service]"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[Service]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[Rush]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Rush"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[Rush]"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[Rush]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[Techs]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Techs"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[Techs]"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[Techs]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[WtyLbr]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="WtyLbr"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[WtyLbr]"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[WtyLbr]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[WtyParts]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="WtyParts"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[WtyParts]"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[WtyParts]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[Payment]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Payment"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[Payment]"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[Payment]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[ReqDay]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ReqDay"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[ReqDay]"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[ReqDay]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[WorkDay]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="WorkDay"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[WorkDay]"
+                      lineageId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output].Columns[WorkDay]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[Copy of ReqDate]"
+                      cachedDataType="dbDate"
+                      cachedName="Copy of ReqDate"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[ReqDate]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ReqDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[Copy of WorkDate]"
+                      cachedDataType="dbDate"
+                      cachedName="Copy of WorkDate"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[WorkDate]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of WorkDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[Copy of LbrHrs]"
+                      cachedDataType="r8"
+                      cachedName="Copy of LbrHrs"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[LbrHrs]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrHrs]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[Copy of PartsCost]"
+                      cachedDataType="r8"
+                      cachedName="Copy of PartsCost"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[PartsCost]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PartsCost]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[Copy of Wait]"
+                      cachedDataType="r8"
+                      cachedName="Copy of Wait"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[Wait]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Wait]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[Copy of LbrCost]"
+                      cachedDataType="r8"
+                      cachedName="Copy of LbrCost"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[LbrCost]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrCost]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[Copy of LbrFee]"
+                      cachedDataType="r8"
+                      cachedName="Copy of LbrFee"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[LbrFee]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrFee]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[Copy of PartsFee]"
+                      cachedDataType="r8"
+                      cachedName="Copy of PartsFee"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[PartsFee]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PartsFee]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[Copy of TotalCost]"
+                      cachedDataType="r8"
+                      cachedName="Copy of TotalCost"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[TotalCost]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalCost]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[Copy of TotalFee]"
+                      cachedDataType="r8"
+                      cachedName="Copy of TotalFee"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[TotalFee]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of TotalFee]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].Columns[Copy of LbrRate]"
+                      cachedDataType="r8"
+                      cachedName="Copy of LbrRate"
+                      externalMetadataColumnId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[LbrRate]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LbrRate]" />
+                  </inputColumns>
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[WO]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="WO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[District]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="District" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[LeadTech]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LeadTech" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[Service]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Service" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[Rush]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Rush" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[ReqDate]"
+                      dataType="dbDate"
+                      name="ReqDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[WorkDate]"
+                      dataType="dbDate"
+                      name="WorkDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[Techs]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Techs" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[WtyLbr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="WtyLbr" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[WtyParts]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="WtyParts" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[LbrHrs]"
+                      dataType="r8"
+                      name="LbrHrs" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[PartsCost]"
+                      dataType="r8"
+                      name="PartsCost" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[Payment]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Payment" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[Wait]"
+                      dataType="r8"
+                      name="Wait" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[LbrCost]"
+                      dataType="r8"
+                      name="LbrCost" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[LbrFee]"
+                      dataType="r8"
+                      name="LbrFee" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[PartsFee]"
+                      dataType="r8"
+                      name="PartsFee" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[TotalCost]"
+                      dataType="r8"
+                      name="TotalCost" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[TotalFee]"
+                      dataType="r8"
+                      name="TotalFee" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[ReqDay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ReqDay" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[WorkDay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="WorkDay" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input].ExternalColumns[LbrRate]"
+                      dataType="r8"
+                      name="LbrRate" />
+                  </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
@@ -130,6 +1400,18 @@
               </outputs>
             </component>
           </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task\STG_ORDER_1.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\LND_ORDER_1.Outputs[OLE DB Source Output]" />
+          </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -157,13 +1439,91 @@
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150.666666666667,42.6666666666667"
+          Id="Package\Data Flow Task\LND_ORDER_1"
+          TopLeft="273.749995920807,30.2499997094273" />
+        <NodeLayout
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="270.624995967373,99.9166656787197" />
         <NodeLayout
           Size="150.666666666667,42.6666666666667"
           Id="Package\Data Flow Task\STG_ORDER_1"
-          TopLeft="273.749995920807,93.1166651208202" />
+          TopLeft="269.374995986,170.949996943176" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="349.18749594409,72.916666376094">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.9999993026257"
+              Start="0,0"
+              End="0,19.4999993026257">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.4999993026257" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="346.999995976686,142.583332345386">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.3666645977896"
+              Start="0,0"
+              End="0,20.8666645977896">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.8666645977896" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\LND_ORDER_1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\STG_ORDER_1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

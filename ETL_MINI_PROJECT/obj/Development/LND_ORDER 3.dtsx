@@ -11,11 +11,23 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Package2"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{12A6217D-217C-4FE2-9C60-546CDCEC9045}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{BA0E4365-877F-423A-992A-C26669BA001B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{08E80190-804F-4D42-B9C5-478ADD046C49}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Drives origional copy\Drive c\Desktop\Scoden\Digember_ETL_July2022\ETL___MINI__PROJECT\Source\Order3.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
       DTS:CreationName="EXCEL"
@@ -73,7 +85,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">Sheet1$</property>
+                  name="OpenRowset">Updated$</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -100,8 +112,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -348,11 +360,13 @@
                       name="Rush" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[ReqDate]"
-                      dataType="date"
+                      dataType="wstr"
+                      length="255"
                       name="ReqDate" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[WorkDate]"
-                      dataType="date"
+                      dataType="wstr"
+                      length="255"
                       name="WorkDate" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Techs]"
@@ -458,12 +472,14 @@
                       name="Rush" />
                     <outputColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ReqDate]"
-                      dataType="date"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ReqDate]"
                       name="ReqDate" />
                     <outputColumn
                       refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[WorkDate]"
-                      dataType="date"
+                      dataType="wstr"
+                      length="255"
                       lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[WorkDate]"
                       name="WorkDate" />
                     <outputColumn
@@ -943,39 +959,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="150.666666666667,42.6666666666667"
+          Id="Package\Data Flow Task\LND_ORDER_3"
+          TopLeft="304.999995455145,113.749997965992" />
+        <NodeLayout
           Size="139.333333333334,42.6666666666667"
           Id="Package\Data Flow Task\Excel Source"
           TopLeft="309.374995389954,1.77635683940025E-14" />
-        <NodeLayout
-          Size="150.666666666667,42.6666666666667"
-          Id="Package\Data Flow Task\LND_ORDER_3"
-          TopLeft="267.499996013939,134.549997594059" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output]"
-          TopLeft="379.04166205662,42.6666666666667">
+          TopLeft="379.68749542255,42.6666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-36.2083327093476,91.8833309273919"
+              EndConnector="0,71.0833312993253"
               Start="0,0"
-              End="-36.2083327093476,84.3833309273919">
+              End="0,63.5833312993253">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.9416654636959" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,41.9416654636959"
-                    Point2="0,45.9416654636959"
-                    Point3="-4,45.9416654636959" />
-                  <mssgle:LineSegment
-                    End="-32.2083327093476,45.9416654636959" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-32.2083327093476,45.9416654636959"
-                    Point2="-36.2083327093476,45.9416654636959"
-                    Point3="-36.2083327093476,49.9416654636959" />
-                  <mssgle:LineSegment
-                    End="-36.2083327093476,84.3833309273919" />
+                    End="0,63.5833312993253" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

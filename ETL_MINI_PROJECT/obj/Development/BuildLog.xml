@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ETL_MINI_PROJECT</Name>
-    <LastWriteTime>2022-08-13T18:03:32.9795092Z</LastWriteTime>
+    <LastWriteTime>2022-08-14T17:34:15.5981969Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -13,32 +13,32 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LND_ORDER 3.dtsx</Name>
-      <LastWriteTime>2022-08-13T18:03:32.7212011Z</LastWriteTime>
+      <LastWriteTime>2022-08-14T11:28:40.7832065Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LND_ORDER 2.dtsx</Name>
-      <LastWriteTime>2022-08-13T13:42:29.8356961Z</LastWriteTime>
+      <LastWriteTime>2022-08-14T10:20:38.8802768Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>STG_ORDER 1.dtsx</Name>
-      <LastWriteTime>2022-08-12T08:29:38.8958846Z</LastWriteTime>
+      <LastWriteTime>2022-08-14T17:34:15.5251891Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>STG_ORDER 2.dtsx</Name>
-      <LastWriteTime>2022-08-12T08:44:18.7811942Z</LastWriteTime>
+      <LastWriteTime>2022-08-14T17:34:15.5411843Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>STG_ORDER 3.dtsx</Name>
-      <LastWriteTime>2022-08-12T08:44:18.7674943Z</LastWriteTime>
+      <LastWriteTime>2022-08-14T16:44:30.368806Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DWH_ORDERS.dtsx</Name>
-      <LastWriteTime>2022-08-12T08:44:18.7481653Z</LastWriteTime>
+      <LastWriteTime>2022-08-14T17:40:29.5078158Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
